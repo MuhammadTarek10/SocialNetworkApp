@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "160814305779",
+    "project_id": "socialnetworkcourse-c3add",
+    "storage_bucket": "socialnetworkcourse-c3add.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:160814305779:android:66bfc84a323e0512b94286",
+        "android_client_info": {
+          "package_name": "com.example.social_network_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "160814305779-cue0t5irntih84rpvdmiesdlgj00f5cu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.social_network_app",
+            "certificate_hash": "137c546627d37b4ce5fffa455ede0ea1940f68c8"
+          }
+        },
+        {
+          "client_id": "160814305779-p8rk3hr56s01fero0r3iv1p4nap49072.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9r6OTx6gAiTVXsJ7rPhOiafvJ_vWi2WQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "160814305779-p8rk3hr56s01fero0r3iv1p4nap49072.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

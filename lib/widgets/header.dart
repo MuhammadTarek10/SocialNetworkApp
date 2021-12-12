@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
-AppBar header(context, {bool isAppTitle = false, titleText}) {
+AppBar header(context, {bool isAppTitle = false, titleText, bool removeBackButton = false}) {
   return AppBar(
+    automaticallyImplyLeading: removeBackButton? false:true,
     title: Text(
       isAppTitle? "FlutterShare" : titleText,
       style: TextStyle(

@@ -15,24 +15,30 @@ class Timeline extends StatefulWidget {
 class _TimelineState extends State<Timeline> {
 
   @override
-  void initState() {
-    getUsers();
+  void initState(){
+
     super.initState();
   }
 
-  getUsers() async {
-    final QuerySnapshot snapshot = await usersRef
-        .get();
-    snapshot.docs.forEach((DocumentSnapshot doc) {
-      print(doc.data());
-    });
-  }
 
   @override
   Widget build(context) {
     return Scaffold(
-      appBar: header(context, isAppTitle: true),
-      body: linearProgress(),
+        appBar: header(context, isAppTitle: true),
+        body: StreamBuilder<QuerySnapshot>(
+          stream: usersRef.snapshots(),
+          builder: (context, snapshot) {
+            if (!snapshot.hasData) {
+              return circularProgress();
+            }
+            final children = snapshot.data!.docs.map((doc) => Text(doc['username'])).toList();
+            return Container(
+              child: ListView(
+                children: children,
+              ),
+            );
+          },
+        )
     );
   }
 }
